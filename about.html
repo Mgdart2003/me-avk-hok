@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Rólunk – HÖK ME AVK</title>
+  <style>
+    /* ugyanaz, mint az index.html */
+    body { font-family: Arial, sans-serif; margin: 0; padding: 0; background-color: #fbeaea; }
+    header { background-color: #b30000; color: white; padding: 1rem; display: flex; justify-content: space-between; align-items: center; }
+    .header-left { display: flex; align-items: center; }
+    .header-left img { height: 50px; margin-right: 1rem; }
+    nav a { color: white; margin: 0 1rem; text-decoration: none; }
+    nav a:hover { text-decoration: underline; }
+    main { padding: 2rem; }
+    footer { background-color: #b30000; color: white; text-align: center; padding: 1rem; }
+    .lang-toggle { background: none; border: 1px solid white; color: white; padding: 0.3rem 0.7rem; cursor: pointer; margin-left: 0.5rem; }
+    .social-icons a { margin: 0 0.5rem; color: white; text-decoration: none; font-size: 1.4rem; }
+  </style>
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <script>
+    function toggleLanguage(lang) {
+      const huElements = document.querySelectorAll('[lang="hu"]');
+      const enElements = document.querySelectorAll('[lang="en"]');
+      huElements.forEach(el => el.style.display = lang === 'hu' ? 'block' : 'none');
+      enElements.forEach(el => el.style.display = lang === 'en' ? 'block' : 'none');
+    }
+    window.onload = () => toggleLanguage('hu');
+  </script>
+</head>
+<body>
+  <header>
+    <div class="header-left">
+      <img src="https://lanyoknapja.hu/wp-content/uploads/2023/03/me-avk.jpg" alt="ME AVK logó" />
+      <div>
+        <strong lang="hu">ME AVK Hallgatói Önkormányzat</strong><br />
+        <strong lang="en">Student Union – ME Faculty of Materials and Chemical Engineering</strong>
+      </div>
+    </div>
+    <nav>
+      <a href="index.html" lang="hu">Főoldal</a>
+      <a href="about.html" lang="hu">Rólunk</a>
+      <a href="events.html" lang="hu">Események</a>
+      <a href="contact.html" lang="hu">Kapcsolat</a>
+
+      <a href="index.html" lang="en">Home</a>
+      <a href="about.html" lang="en">About</a>
+      <a href="events.html" lang="en">Events</a>
+      <a href="contact.html" lang="en">Contact</a>
+    </nav>
+    <div>
+      <button class="lang-toggle" onclick="toggleLanguage('hu')">HU</button>
+      <button class="lang-toggle" onclick="toggleLanguage('en')">EN</button>
+    </div>
+  </header>
+
+  <main>
+    <h2 lang="hu">Kik vagyunk?</h2>
+    <p lang="hu">A Miskolci Egyetem Anyag- és Vegyészmérnöki Karának HÖK-je hallgatói érdekképviseletet, programokat és támogatásokat biztosít.</p>
+    <h2 lang="en">Who are we?</h2>
+    <p lang="en">The Student Union of the Faculty of Materials and Chemical Engineering at the University of Miskolc represents students, organizes events, and provides support.</p>
+  </main>
+
+  <footer>
+    <div class="social-icons">
+      <a href="https://facebook.com" target="_blank" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+      <a href="https://instagram.com" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+      <a href="https://tiktok.com" target="_blank" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+    </div>
+    <p lang="hu">&copy; 2025 ME AVK HÖK – Minden jog fenntartva.</p>
+    <p lang="en">&copy; 2025 ME Faculty SU – All rights reserved.</p>
+  </footer>
+</body>
+</html>
